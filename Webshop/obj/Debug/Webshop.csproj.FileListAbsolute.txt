@@ -1,0 +1,13 @@
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\Webshop.exe.config
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\Webshop.exe
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\Webshop.pdb
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.csprojAssemblyReference.cache
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Form1.resources
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Properties.Resources.resources
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.csproj.GenerateResource.cache
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.csproj.CoreCompileInputs.cache
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.exe
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.pdb
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Form2.resources
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Form3.resources
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Form4.resources
