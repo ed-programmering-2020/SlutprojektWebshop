@@ -23,5 +23,11 @@ namespace Webshop
             form2.Show();
             this.Hide();
         }
+
+        private void btnRegistrera_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.Show();
+        }
     }
 }

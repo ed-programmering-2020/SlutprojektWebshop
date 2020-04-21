@@ -70,6 +70,7 @@
             this.btnRegistrera.TabIndex = 3;
             this.btnRegistrera.Text = "Registrera ny användare";
             this.btnRegistrera.UseVisualStyleBackColor = true;
+            this.btnRegistrera.Click += new System.EventHandler(this.btnRegistrera_Click);
             // 
             // label1
             // 

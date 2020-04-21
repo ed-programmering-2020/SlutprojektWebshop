@@ -11,3 +11,13 @@ C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual S
 C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Form2.resources
 C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Form3.resources
 C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Form4.resources
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\Google.Protobuf.dll
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\MySql.Data.dll
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\Renci.SshNet.dll
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\Google.Protobuf.xml
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\MySql.Data.xml
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\bin\Debug\Renci.SshNet.xml
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.Form5.resources
+C:\Users\0102thed\OneDrive\OneDrive - Jönköpings kommun\Programmering\Visual Stidio\C#\Webshop\Webshop\obj\Debug\Webshop.csproj.CopyComplete
