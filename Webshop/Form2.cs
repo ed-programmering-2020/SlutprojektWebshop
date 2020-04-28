@@ -5,9 +5,10 @@ namespace Webshop
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(String Item)
         {
             InitializeComponent();
+            lblUsername.Text = Item;
         }
 
         private void Form2_Load(object sender, EventArgs e)
