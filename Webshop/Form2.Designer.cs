@@ -34,6 +34,7 @@
             this.btnMinaBestallningar = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnÄndraBestallning = new System.Windows.Forms.Button();
+            this.kundID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbxBestallningar
@@ -90,12 +91,23 @@
             this.btnÄndraBestallning.TabIndex = 5;
             this.btnÄndraBestallning.Text = "Ändra beställning";
             this.btnÄndraBestallning.UseVisualStyleBackColor = true;
+            this.btnÄndraBestallning.Click += new System.EventHandler(this.btnÄndraBestallning_Click);
+            // 
+            // kundID
+            // 
+            this.kundID.AutoSize = true;
+            this.kundID.Location = new System.Drawing.Point(405, 22);
+            this.kundID.Name = "kundID";
+            this.kundID.Size = new System.Drawing.Size(49, 13);
+            this.kundID.TabIndex = 6;
+            this.kundID.Text = "Kund ID:";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 450);
+            this.Controls.Add(this.kundID);
             this.Controls.Add(this.btnÄndraBestallning);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnMinaBestallningar);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.Button btnMinaBestallningar;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnÄndraBestallning;
+        private System.Windows.Forms.Label kundID;
     }
 }

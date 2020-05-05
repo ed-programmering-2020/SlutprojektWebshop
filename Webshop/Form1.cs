@@ -21,10 +21,9 @@ namespace Webshop
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
             string anvandarnamn = "";
-
-            string losenord = "";
-
+            string id = "";
             string namn = "";
+            string losenord = "";
 
             MySqlConnection connection;
 
@@ -54,14 +53,15 @@ namespace Webshop
             connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            MySqlCommand cmd1 = new MySqlCommand("select Fornamn, Efternamn, Losenord from kunder where Anvandarnamn = \"" + anvandarnamn + "\"", connection);
+            MySqlCommand cmd1 = new MySqlCommand("select ID, Fornamn, Efternamn, Losenord from kunder where Anvandarnamn = \"" + anvandarnamn + "\"", connection);
 
             dataReader = cmd1.ExecuteReader();
 
             while (dataReader.Read())
             {
-                losenord = dataReader.GetString("Losenord");
+                id = dataReader.GetString("ID");
                 namn = dataReader.GetString("Fornamn") + " " + dataReader.GetString("Efternamn");
+                losenord = dataReader.GetString("Losenord");
             }
 
             connection.Close();
@@ -70,7 +70,7 @@ namespace Webshop
             {
                 if (tbxPassword.Text == losenord)
                 {
-                    Form2 form2 = new Form2(namn);
+                    Form2 form2 = new Form2(id, namn);
                     form2.Show();
                     this.Hide();
                 }

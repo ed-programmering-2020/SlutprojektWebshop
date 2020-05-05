@@ -51,6 +51,7 @@
             this.cbxModel.Name = "cbxModel";
             this.cbxModel.Size = new System.Drawing.Size(121, 21);
             this.cbxModel.TabIndex = 0;
+            this.cbxModel.SelectedIndexChanged += new System.EventHandler(this.cbxModel_SelectedIndexChanged);
             // 
             // cbxSpeModel
             // 

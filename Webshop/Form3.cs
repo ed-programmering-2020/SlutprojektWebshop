@@ -16,5 +16,10 @@ namespace Webshop
         {
             InitializeComponent();
         }
+
+        private void cbxModel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

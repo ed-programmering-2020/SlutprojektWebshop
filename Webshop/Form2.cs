@@ -5,10 +5,11 @@ namespace Webshop
 {
     public partial class Form2 : Form
     {
-        public Form2(String Item)
+        public Form2(String item, String item1)
         {
             InitializeComponent();
-            lblUsername.Text = Item;
+            lblUsername.Text = item1;
+            kundID.Text += item;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -25,6 +26,12 @@ namespace Webshop
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnÄndraBestallning_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.ShowDialog();
         }
     }
 }
