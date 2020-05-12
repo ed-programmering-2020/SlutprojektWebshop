@@ -69,6 +69,7 @@
             this.tbxLosenord1.Name = "tbxLosenord1";
             this.tbxLosenord1.Size = new System.Drawing.Size(100, 20);
             this.tbxLosenord1.TabIndex = 3;
+            this.tbxLosenord1.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -141,6 +142,7 @@
             this.tbxLosenord2.Name = "tbxLosenord2";
             this.tbxLosenord2.Size = new System.Drawing.Size(100, 20);
             this.tbxLosenord2.TabIndex = 16;
+            this.tbxLosenord2.UseSystemPasswordChar = true;
             // 
             // Form5
             // 

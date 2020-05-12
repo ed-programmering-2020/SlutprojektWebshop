@@ -29,9 +29,9 @@ namespace Webshop
 
             MySqlConnection connection;
 
-            string connectionString = 
-               "SERVER=localhost;DATABASE=webshop;" +
-               "UID=user;PASSWORD=password;";
+            string connectionString =
+               "SERVER=5.178.75.122;DATABASE=webshopdb;" +
+               "UID=edvin;PASSWORD=EdvinT;";
 
             connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -71,6 +71,8 @@ namespace Webshop
                     connection.Close();
 
                     MessageBox.Show("Nytt konto skapat!");
+
+                    this.Close();
                 }
                 else
                 {

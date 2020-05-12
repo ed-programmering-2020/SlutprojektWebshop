@@ -28,8 +28,8 @@ namespace Webshop
             MySqlConnection connection;
 
             string connectionString =
-               "SERVER=localhost;DATABASE=webshop;" +
-               "UID=user;PASSWORD=password;";
+               "SERVER=5.178.75.122;DATABASE=webshopdb;" +
+               "UID=edvin;PASSWORD=EdvinT;";
 
             connection = new MySqlConnection(connectionString);
             connection.Open();

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.cbxModel = new System.Windows.Forms.ComboBox();
-            this.cbxSpeModel = new System.Windows.Forms.ComboBox();
+            this.cbxBrand = new System.Windows.Forms.ComboBox();
             this.cbxPatterns = new System.Windows.Forms.ComboBox();
             this.cbxColors = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,17 +53,30 @@
             this.cbxModel.TabIndex = 0;
             this.cbxModel.SelectedIndexChanged += new System.EventHandler(this.cbxModel_SelectedIndexChanged);
             // 
-            // cbxSpeModel
+            // cbxBrand
             // 
-            this.cbxSpeModel.FormattingEnabled = true;
-            this.cbxSpeModel.Location = new System.Drawing.Point(76, 171);
-            this.cbxSpeModel.Name = "cbxSpeModel";
-            this.cbxSpeModel.Size = new System.Drawing.Size(121, 21);
-            this.cbxSpeModel.TabIndex = 1;
+            this.cbxBrand.FormattingEnabled = true;
+            this.cbxBrand.Items.AddRange(new object[] {
+            "Bailey",
+            "Goorin",
+            "Christys\' Of London",
+            "New Era",
+            "Lock & Co",
+            "Past Present",
+            "Borsalino"});
+            this.cbxBrand.Location = new System.Drawing.Point(76, 171);
+            this.cbxBrand.Name = "cbxBrand";
+            this.cbxBrand.Size = new System.Drawing.Size(121, 21);
+            this.cbxBrand.TabIndex = 1;
             // 
             // cbxPatterns
             // 
             this.cbxPatterns.FormattingEnabled = true;
+            this.cbxPatterns.Items.AddRange(new object[] {
+            "Inget",
+            "Fläckig",
+            "Rutig",
+            "Randig"});
             this.cbxPatterns.Location = new System.Drawing.Point(76, 233);
             this.cbxPatterns.Name = "cbxPatterns";
             this.cbxPatterns.Size = new System.Drawing.Size(121, 21);
@@ -101,9 +114,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(73, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Specifik model";
+            this.label3.Text = "Märke";
             // 
             // label4
             // 
@@ -145,7 +158,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxColors);
             this.Controls.Add(this.cbxPatterns);
-            this.Controls.Add(this.cbxSpeModel);
+            this.Controls.Add(this.cbxBrand);
             this.Controls.Add(this.cbxModel);
             this.Name = "Form3";
             this.Text = "Form3";
@@ -157,7 +170,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbxModel;
-        private System.Windows.Forms.ComboBox cbxSpeModel;
+        private System.Windows.Forms.ComboBox cbxBrand;
         private System.Windows.Forms.ComboBox cbxPatterns;
         private System.Windows.Forms.ComboBox cbxColors;
         private System.Windows.Forms.Label label1;
