@@ -28,60 +28,39 @@ namespace Webshop
             MySqlConnection connection;
 
             string connectionString =
-               "SERVER=5.178.75.122;DATABASE=webshopdb;" +
-               "UID=edvin;PASSWORD=EdvinT;";
+               "SERVER=5.178.75.122;DATABASE=webshopdb;UID=edvin;PASSWORD=EdvinT;";
 
             connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            MySqlDataReader dataReader = null;
+            MySqlCommand cmd = kunder.getKunderByUsername(tbxUsername.Text);
+            
+            MySqlDataAdapter datAdapt = new MySqlDataAdapter();
+            datAdapt.SelectCommand = cmd;
+            cmd.Connection = connection;
+            DataTable dt = new DataTable();
+            datAdapt.Fill(dt);
 
-            MySqlCommand cmd = new MySqlCommand("select Anvandarnamn from kunder", connection);
+            kunder aktuellKund = null;
+            if (dt.Rows.Count > 0)
+            aktuellKund = new kunder(dt.Rows[0]);
 
-            dataReader = cmd.ExecuteReader();
-
-            while (dataReader.Read())
+            if(aktuellKund == null)
             {
-                if (tbxUsername.Text == dataReader.GetString("Anvandarnamn"))
+                MessageBox.Show("Det finns inget konto med det användarnamnet!");
+            }
+            else
+            {
+                if (aktuellKund.Losenord != tbxPassword.Text)
                 {
-                    anvandarnamn = dataReader.GetString("Anvandarnamn");
+                    MessageBox.Show("Felaktigt lösenord!");
                 }
-            }
-
-            connection.Close();
-
-            connection = new MySqlConnection(connectionString);
-            connection.Open();
-
-            MySqlCommand cmd1 = new MySqlCommand("select ID, Fornamn, Efternamn, Losenord from kunder where Anvandarnamn = \"" + anvandarnamn + "\"", connection);
-
-            dataReader = cmd1.ExecuteReader();
-
-            while (dataReader.Read())
-            {
-                id = dataReader.GetString("ID");
-                namn = dataReader.GetString("Fornamn") + " " + dataReader.GetString("Efternamn");
-                losenord = dataReader.GetString("Losenord");
-            }
-
-            connection.Close();
-
-            if (anvandarnamn == tbxUsername.Text)
-            {
-                if (tbxPassword.Text == losenord)
+                else
                 {
                     Form2 form2 = new Form2(id, namn);
                     form2.Show();
                     this.Hide();
                 }
-                else
-                {
-                    MessageBox.Show("Felaktigt lösenord!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Det finns inget konto med det användarnamnet!");
             }
         }
 
