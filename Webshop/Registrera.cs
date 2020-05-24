@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace Webshop
 {
-    public partial class Form5 : Form
+    public partial class Registrera : Form
     {
-        public Form5()
+        public Registrera()
         {
             InitializeComponent();
         }

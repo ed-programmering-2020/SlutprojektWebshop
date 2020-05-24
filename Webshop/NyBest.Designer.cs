@@ -1,6 +1,6 @@
 ﻿namespace Webshop
 {
-    partial class Form3
+    partial class NyBest
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             // 
             // cbxModel
             // 
+            this.cbxModel.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbxModel.FormattingEnabled = true;
             this.cbxModel.Items.AddRange(new object[] {
             "Mössa",
@@ -85,6 +86,22 @@
             // cbxColors
             // 
             this.cbxColors.FormattingEnabled = true;
+            this.cbxColors.Items.AddRange(new object[] {
+            "Svart",
+            "Vit",
+            "Röd",
+            "Rosa",
+            "Magneta",
+            "Violett",
+            "Blå",
+            "Azur",
+            "Cyan",
+            "Spring green",
+            "Grön",
+            "Chartreuse",
+            "Gul",
+            "Orange",
+            "Brun"});
             this.cbxColors.Location = new System.Drawing.Point(76, 295);
             this.cbxColors.Name = "cbxColors";
             this.cbxColors.Size = new System.Drawing.Size(121, 21);
@@ -144,8 +161,9 @@
             this.btnSparaKöp.TabIndex = 9;
             this.btnSparaKöp.Text = "Spara beställning";
             this.btnSparaKöp.UseVisualStyleBackColor = true;
+            this.btnSparaKöp.Click += new System.EventHandler(this.btnSparaKöp_Click);
             // 
-            // Form3
+            // NyBest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +178,7 @@
             this.Controls.Add(this.cbxPatterns);
             this.Controls.Add(this.cbxBrand);
             this.Controls.Add(this.cbxModel);
-            this.Name = "Form3";
+            this.Name = "NyBest";
             this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();

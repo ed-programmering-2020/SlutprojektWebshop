@@ -1,6 +1,6 @@
 ﻿namespace Webshop
 {
-    partial class Form4
+    partial class AndraBest
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbxColors = new System.Windows.Forms.ComboBox();
             this.cbxPatterns = new System.Windows.Forms.ComboBox();
-            this.cbxSpeModel = new System.Windows.Forms.ComboBox();
+            this.cbxBrand = new System.Windows.Forms.ComboBox();
             this.cbxModel = new System.Windows.Forms.ComboBox();
             this.btnRadera = new System.Windows.Forms.Button();
             this.btnSpara = new System.Windows.Forms.Button();
@@ -64,9 +64,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(71, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Specifik model";
+            this.label3.Text = "Märke";
             // 
             // label2
             // 
@@ -91,6 +91,22 @@
             // cbxColors
             // 
             this.cbxColors.FormattingEnabled = true;
+            this.cbxColors.Items.AddRange(new object[] {
+            "Svart",
+            "Vit",
+            "Röd",
+            "Rosa",
+            "Magneta",
+            "Violett",
+            "Blå",
+            "Azur",
+            "Cyan",
+            "Spring green",
+            "Grön",
+            "Chartreuse",
+            "Gul",
+            "Orange",
+            "Brun"});
             this.cbxColors.Location = new System.Drawing.Point(74, 285);
             this.cbxColors.Name = "cbxColors";
             this.cbxColors.Size = new System.Drawing.Size(121, 21);
@@ -99,18 +115,31 @@
             // cbxPatterns
             // 
             this.cbxPatterns.FormattingEnabled = true;
+            this.cbxPatterns.Items.AddRange(new object[] {
+            "Inget",
+            "Fläckig",
+            "Rutig",
+            "Randig"});
             this.cbxPatterns.Location = new System.Drawing.Point(74, 220);
             this.cbxPatterns.Name = "cbxPatterns";
             this.cbxPatterns.Size = new System.Drawing.Size(121, 21);
             this.cbxPatterns.TabIndex = 11;
             // 
-            // cbxSpeModel
+            // cbxBrand
             // 
-            this.cbxSpeModel.FormattingEnabled = true;
-            this.cbxSpeModel.Location = new System.Drawing.Point(74, 152);
-            this.cbxSpeModel.Name = "cbxSpeModel";
-            this.cbxSpeModel.Size = new System.Drawing.Size(121, 21);
-            this.cbxSpeModel.TabIndex = 10;
+            this.cbxBrand.FormattingEnabled = true;
+            this.cbxBrand.Items.AddRange(new object[] {
+            "Bailey",
+            "Goorin",
+            "Christys\' Of London",
+            "New Era",
+            "Lock & Co",
+            "Past Present",
+            "Borsalino"});
+            this.cbxBrand.Location = new System.Drawing.Point(74, 152);
+            this.cbxBrand.Name = "cbxBrand";
+            this.cbxBrand.Size = new System.Drawing.Size(121, 21);
+            this.cbxBrand.TabIndex = 10;
             // 
             // cbxModel
             // 
@@ -132,6 +161,7 @@
             this.btnRadera.TabIndex = 18;
             this.btnRadera.Text = "Radera";
             this.btnRadera.UseVisualStyleBackColor = true;
+            this.btnRadera.Click += new System.EventHandler(this.btnRadera_Click);
             // 
             // btnSpara
             // 
@@ -141,8 +171,9 @@
             this.btnSpara.TabIndex = 19;
             this.btnSpara.Text = "Spara ändringar";
             this.btnSpara.UseVisualStyleBackColor = true;
+            this.btnSpara.Click += new System.EventHandler(this.btnSpara_Click);
             // 
-            // Form4
+            // AndraBest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,9 +187,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxColors);
             this.Controls.Add(this.cbxPatterns);
-            this.Controls.Add(this.cbxSpeModel);
+            this.Controls.Add(this.cbxBrand);
             this.Controls.Add(this.cbxModel);
-            this.Name = "Form4";
+            this.Name = "AndraBest";
             this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,7 +205,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxColors;
         private System.Windows.Forms.ComboBox cbxPatterns;
-        private System.Windows.Forms.ComboBox cbxSpeModel;
+        private System.Windows.Forms.ComboBox cbxBrand;
         private System.Windows.Forms.ComboBox cbxModel;
         private System.Windows.Forms.Button btnRadera;
         private System.Windows.Forms.Button btnSpara;

@@ -26,7 +26,6 @@ namespace Webshop
             return command;
         }
 
-
         // Datarad till objekt via Konstruktör 
         public kunder(DataRow dr)
         {

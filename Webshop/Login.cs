@@ -11,20 +11,15 @@ using MySql.Data.MySqlClient;
 
 namespace Webshop
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
 
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
-            string anvandarnamn = "";
-            string id = "";
-            string namn = "";
-            string losenord = "";
-
             MySqlConnection connection;
 
             string connectionString =
@@ -45,7 +40,12 @@ namespace Webshop
             if (dt.Rows.Count > 0)
             aktuellKund = new kunder(dt.Rows[0]);
 
-            if(aktuellKund == null)
+            connection.Close();
+
+            int id = aktuellKund.ID;
+            string namn = aktuellKund.Fornamn + " " + aktuellKund.Efternamn;
+
+            if (aktuellKund == null)
             {
                 MessageBox.Show("Det finns inget konto med det användarnamnet!");
             }
@@ -57,17 +57,26 @@ namespace Webshop
                 }
                 else
                 {
-                    Form2 form2 = new Form2(id, namn);
-                    form2.Show();
-                    this.Hide();
+                    if (aktuellKund.Anvandarnamn != "admin")
+                    {
+                        Main main = new Main(id, namn);
+                        main.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        Admin admin = new Admin();
+                        admin.Show();
+                        this.Hide();
+                    }
                 }
             }
         }
 
         private void btnRegistrera_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
-            form5.Show();
+            Registrera registrera = new Registrera();
+            registrera.Show();
         }
     }
 }

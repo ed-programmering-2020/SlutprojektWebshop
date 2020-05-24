@@ -1,6 +1,6 @@
 ﻿namespace Webshop
 {
-    partial class Form5
+    partial class Registrera
     {
         /// <summary>
         /// Required designer variable.
