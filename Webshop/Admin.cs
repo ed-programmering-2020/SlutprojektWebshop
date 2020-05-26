@@ -16,19 +16,20 @@ namespace Webshop
 {
     public partial class Admin : Form
     {
+        TcpClient tcpClient = new TcpClient();
         TcpListener tcpListener;
         int port = 12345;
-
-        IPEndPoint iPEndPoint;
 
         string bestID;
 
         public Admin()
         {
             InitializeComponent();
+            tcpClient.NoDelay = true;
 
             try
             {
+                port = 12345;
                 tcpListener = new TcpListener(IPAddress.Any, port);
                 tcpListener.Start();
             }
@@ -72,6 +73,10 @@ namespace Webshop
         public async void StartReading(TcpClient tcp)
         {
             byte[] buffert = new byte[1024];
+
+            string iPAddress = tcp.Client.RemoteEndPoint.ToString().Split(':')[0];
+
+            tbxIpAddress.Text = iPAddress;
 
             int e = 0;
 
@@ -117,6 +122,60 @@ namespace Webshop
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSendInfo_Click(object sender, EventArgs e)
+        {
+            StartConnection();
+        }
+
+        public async void StartConnection()
+        {
+            try
+            {
+                IPAddress address = IPAddress.Parse(tbxIpAddress.Text);
+                port = 12346;
+                await tcpClient.ConnectAsync(address, port);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Text);
+                return;
+            }
+
+            StartTransmission(tbxFraktTid.Text);
+            btnSendInfo.Enabled = false;
+
+            try
+            {
+                tcpListener = new TcpListener(IPAddress.Any, port);
+                tcpListener.Start();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Text);
+                return;
+            }
+        }
+
+        public async void StartTransmission(string input)
+        {
+            byte[] output = Encoding.Unicode.GetBytes(input);
+
+            try
+            {
+                await tcpClient.GetStream().WriteAsync(output, 0, output.Length);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Text);
+                return;
+            }
         }
     }
 }

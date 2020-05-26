@@ -15,9 +15,11 @@ namespace Webshop
     public partial class Frakt : Form
     {
         TcpClient tcpClient = new TcpClient();
+        TcpListener tcpListener;
         int port = 12345;
 
         string bestID;
+        string fraktTid;
 
         public Frakt(string item)
         {
@@ -31,7 +33,6 @@ namespace Webshop
             if (!tcpClient.Connected)
             {
                 StartConnection();
-                MessageBox.Show("Connected to server");
             }
         }
 
@@ -40,6 +41,7 @@ namespace Webshop
             try
             {
                 IPAddress address = IPAddress.Parse(tbxIPAddress.Text);
+                port = 12345;
                 await tcpClient.ConnectAsync(address, port);
             }
             catch (Exception error)
@@ -49,11 +51,31 @@ namespace Webshop
             }
 
             btnConnect.Enabled = false;
+            btnSendInfo.Enabled = true;
+            MessageBox.Show("Connected to server");
         }
 
         private void btnSendInfo_Click(object sender, EventArgs e)
         {
             StartTransmission(bestID);
+            if (tcpClient.Connected)
+            {
+                btnSendInfo.Enabled = false;
+            }
+
+            try
+            {
+                port = 12346;
+                tcpListener = new TcpListener(IPAddress.Any, port);
+                tcpListener.Start();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Text);
+                return;
+            }
+
+            StartReception();
         }
 
         public async void StartTransmission(string input)
@@ -69,6 +91,45 @@ namespace Webshop
                 MessageBox.Show(error.Message, Text);
                 return;
             }
+        }
+
+        public async void StartReception()
+        {
+            TcpClient client;
+
+            try
+            {
+                client = await tcpListener.AcceptTcpClientAsync();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Text);
+                return;
+            }
+
+            StartReading(client);
+            StartReception();
+        }
+
+        public async void StartReading(TcpClient tcp)
+        {
+            byte[] buffert = new byte[1024];
+
+            int e = 0;
+
+            try
+            {
+                e = await tcp.GetStream().ReadAsync(buffert, 0, buffert.Length);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, Text);
+                return;
+            }
+
+            fraktTid = Encoding.Unicode.GetString(buffert, 0, e);
+
+            tbxFraktInfo.Text = "Din beställning kommer att anlända till närmsta postombud inom " + fraktTid + " timmar.";
         }
     }
 }

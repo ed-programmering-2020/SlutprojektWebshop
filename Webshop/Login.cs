@@ -28,17 +28,27 @@ namespace Webshop
             connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            MySqlCommand cmd = kunder.getKunderByUsername(tbxUsername.Text);
-            
-            MySqlDataAdapter datAdapt = new MySqlDataAdapter();
-            datAdapt.SelectCommand = cmd;
-            cmd.Connection = connection;
-            DataTable dt = new DataTable();
-            datAdapt.Fill(dt);
-
             kunder aktuellKund = null;
-            if (dt.Rows.Count > 0)
-            aktuellKund = new kunder(dt.Rows[0]);
+
+            try
+            {
+                MySqlCommand cmd = kunder.getKunderByUsername(tbxUsername.Text);
+
+                MySqlDataAdapter datAdapt = new MySqlDataAdapter();
+                datAdapt.SelectCommand = cmd;
+                cmd.Connection = connection;
+                DataTable dt = new DataTable();
+                datAdapt.Fill(dt);
+                
+                //if (dt.Rows.Count > 0)
+                aktuellKund = new kunder(dt.Rows[0]);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Användarnamnet finns inte!", Text);
+                Console.WriteLine(error);
+                return;
+            }
 
             connection.Close();
 

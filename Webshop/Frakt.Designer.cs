@@ -33,14 +33,15 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnSendInfo = new System.Windows.Forms.Button();
             this.tbxFraktInfo = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Location = new System.Drawing.Point(12, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
@@ -48,14 +49,15 @@
             // 
             // tbxIPAddress
             // 
-            this.tbxIPAddress.Location = new System.Drawing.Point(12, 45);
+            this.tbxIPAddress.Location = new System.Drawing.Point(12, 103);
             this.tbxIPAddress.Name = "tbxIPAddress";
             this.tbxIPAddress.Size = new System.Drawing.Size(100, 20);
             this.tbxIPAddress.TabIndex = 1;
+            this.tbxIPAddress.Text = "192.168.1.";
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(187, 42);
+            this.btnConnect.Location = new System.Drawing.Point(187, 100);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(75, 23);
             this.btnConnect.TabIndex = 2;
@@ -65,45 +67,60 @@
             // 
             // btnSendInfo
             // 
-            this.btnSendInfo.Location = new System.Drawing.Point(12, 260);
+            this.btnSendInfo.Enabled = false;
+            this.btnSendInfo.Location = new System.Drawing.Point(187, 149);
             this.btnSendInfo.Name = "btnSendInfo";
-            this.btnSendInfo.Size = new System.Drawing.Size(150, 23);
+            this.btnSendInfo.Size = new System.Drawing.Size(75, 23);
             this.btnSendInfo.TabIndex = 3;
-            this.btnSendInfo.Text = "Skicka förfrågan";
+            this.btnSendInfo.Text = "Skicka";
             this.btnSendInfo.UseVisualStyleBackColor = true;
             this.btnSendInfo.Click += new System.EventHandler(this.btnSendInfo_Click);
             // 
             // tbxFraktInfo
             // 
-            this.tbxFraktInfo.Location = new System.Drawing.Point(12, 289);
+            this.tbxFraktInfo.Enabled = false;
+            this.tbxFraktInfo.Location = new System.Drawing.Point(12, 269);
             this.tbxFraktInfo.Multiline = true;
             this.tbxFraktInfo.Name = "tbxFraktInfo";
             this.tbxFraktInfo.Size = new System.Drawing.Size(200, 100);
             this.tbxFraktInfo.TabIndex = 4;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 74);
+            this.label2.Location = new System.Drawing.Point(12, 253);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Egna IP-adress";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Tid för frakt";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Skicka förfrågan för frakt tid";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(47, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(186, 23);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Frakt tid för beställning";
             // 
             // Frakt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 401);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tbxFraktInfo);
             this.Controls.Add(this.btnSendInfo);
             this.Controls.Add(this.btnConnect);
@@ -123,7 +140,8 @@
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnSendInfo;
         private System.Windows.Forms.TextBox tbxFraktInfo;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
